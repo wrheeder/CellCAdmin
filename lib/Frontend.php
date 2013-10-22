@@ -29,13 +29,14 @@ class Frontend extends ApiFrontend {
                 ->_load('atk4_univ')
                 ->_load('ui.atk4_notify')
         ;
-        
+        $layout=$this->add('Layout/Layout');
         $l = $this->add('menu/Menu_Dropdown', null, 'Menu'); // DON'T USE FIELD NAMED "ID", because it's already built-in Model class as auto-incremental
         
         if ($auth->isLoggedIn()){
             
             $l->setSource(array(
                 array('ids' => 0, 'page' => 'index', 'name' => 'Home', 'parent_id' => null),
+                array('ids' => 1, 'page' => 'snapshot', 'name' => 'Snapshots', 'parent_id' => null),
                 array('ids' => 2, 'page' => 'logout', 'name' => 'Logout', 'parent_id' => null)                
             ));
     }

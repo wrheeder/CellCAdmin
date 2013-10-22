@@ -13,6 +13,6 @@
 include 'atk4/loader.php';
 
 date_default_timezone_set('Africa/Johannesburg');
-$api=new Frontend('eclipse','cellc');
+$api=new Frontend('CellCAdmin','cellc');
 $api->main();
 ?>
